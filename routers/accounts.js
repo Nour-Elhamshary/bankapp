@@ -1,9 +1,12 @@
 accountsRouters = require("express").Router();
-const accountcontroller = require("../controllers/accounts.js");
-const authMiddleWare = require("../middleware/auth");
+const accountController = require("../controllers/accounts.js");
+//const authMiddleWare = require("../middleware/auth");
 
-accountsRouters.post("",authMiddleWare.checkAuth,account.add);
-accountsRouters.post("/login",accountcontroller.login);
+accountsRouters.post("",accountController.add);
+accountsRouters.get("",accountController.display);
+accountsRouters.put("",accountController.update);
+accountsRouters.delete("",accountController.delete);
+//accountsRouters.post("/login",accountcontroller.login);
 
 
 module.exports = accountsRouters;
