@@ -1,4 +1,4 @@
-import clientSummary from "./components/clients/clients";
+import ClientSummary from "./components/clients/clients";
 
 const APP=()=>{
   const dummyclient={
@@ -9,7 +9,7 @@ const APP=()=>{
 
   return(
   <div>
-    <clientSummary client={dummyclient}/>
+    <ClientSummary client={dummyclient}/>
   </div>  
   );
 };
