@@ -1,8 +1,8 @@
 const MongoClient = require("mongodb").MongoClient;
-const url = "mongodb://127.0.0.1:27017"
+const url = "mongodb+srv://bankDB:bankDB@bankdb.2o1shqp.mongodb.net/Bank?retryWrites=true&w=majority"
 const getConnection = async() =>{
     const connect = await new MongoClient(url).connect();
-    const eCommerceDB = connect.db("E-Commerce");
+    const eCommerceDB = connect.db("Bank");
     const clientsCollection = eCommerceDB.collection("clients");
     return clientsCollection;
 } 

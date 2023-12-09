@@ -16,5 +16,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.0.0",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.3.6"
   }
 }
