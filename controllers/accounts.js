@@ -38,14 +38,13 @@ exports.add = async (req, res) => {
 };
 
 exports.update = async (req, res) => {
-    const { name, creditcard, typeofaccount, balance} = req.body;
-    const account = {name, creditcard, typeofaccount, balance};
+    const { name, creditcard, typeofaccount} = req.body;
+    const account = {name, creditcard, typeofaccount};
 
     const schema = joi.object({
         name:           joi.string().max(12).required(),
         creditcard:     joi.string().min(16).required(),
-        typeofaccount:  joi.string().required(),
-        balance: joi.number.required()
+        typeofaccount:  joi.string().required()
     });
 
     const validation = schema.validate(account);

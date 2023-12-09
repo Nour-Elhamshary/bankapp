@@ -33,7 +33,8 @@ exports.update = async (account) => {
         {
             name: account.name,
             creditcard: account.creditcard,
-            typeofaccount: account.typeofaccount
+            typeofaccount: account.typeofaccount,
+            balance: account.balance
         }
     );
     return accounts;
