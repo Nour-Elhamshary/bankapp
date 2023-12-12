@@ -93,7 +93,7 @@ exports.update = async (request, response) => {
 
 
 exports.delete = async (request,response) => { 
-  const title=request.body;
+  const loan=request.body;
   const schema = joi.object({
     title: joi
       .string()
@@ -103,27 +103,28 @@ exports.delete = async (request,response) => {
       .required(),
     
   });
-  const validation = schema.validate(title);
+  const validation = schema.validate(loan);
   if (validation.error) {
     return response.status(400).json({
-      state: "Error : loan is invalied",
+      state: "Error : title is invalid",
       message: validation.error,
     });
   }
 
+  const title=loan.title;
   const checkTitle = await loanModel.selectOne({
     title: title,
   });
   if (checkTitle == null) {
     return response.status(400).json({
       status: "error",
-      message: `  Doesn't Exist in the DB`,
+      message: ` ${title} Doesn't Exist in the DB`,
     });
   } else{
     const queryresult= await loanModel.delete(title);
     return response.status(201).json({
       status:"ok",
-      message: `  Succesfully Updated in the DB`
+      message: ` ${title} Succesfully Updated in the DB`
     });
   }
 }

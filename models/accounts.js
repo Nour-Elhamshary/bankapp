@@ -28,13 +28,14 @@ exports.update = async (account) => {
     const accountCollection = await getConnection();
     const accounts = await accountCollection.findOneAndReplace(
         {
-            name: account.name
+            creditcard: account.creditcard
         },
         {
             name: account.name,
             creditcard: account.creditcard,
             typeofaccount: account.typeofaccount,
-            balance: account.balance
+            balance:account.balance
+
         }
     );
     return accounts;

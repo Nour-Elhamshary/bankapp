@@ -38,13 +38,14 @@ exports.add = async (req, res) => {
 };
 
 exports.update = async (req, res) => {
-    const { name, creditcard, typeofaccount} = req.body;
-    const account = {name, creditcard, typeofaccount};
+    const {name, creditcard, typeofaccount, balance} = req.body;
+    const account = {name, creditcard, typeofaccount, balance};
 
     const schema = joi.object({
         name:           joi.string().max(12).required(),
         creditcard:     joi.string().min(16).required(),
-        typeofaccount:  joi.string().required()
+        typeofaccount:  joi.string().required(),
+        balance: joi.number().required()
     });
 
     const validation = schema.validate(account);
@@ -58,7 +59,7 @@ exports.update = async (req, res) => {
     const checkCardExistence = await accountModels.selectOne({
         creditcard: account.creditcard
     });
-    if (checkCardExistence != null) {
+    if (checkCardExistence == null) {
         return res.status(400).json({
             status: "Error.",
             message: `Account related to the card already exists.`

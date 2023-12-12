@@ -33,9 +33,9 @@ exports.update = async (loan) => {
     },
     {
       title: loan.title,
-      amount: loan.description,
-      interest_rate: loan.imageurl,
-      lenght : loan.lenght
+      amount: loan.amount,
+      interest_rate: loan.interest_rate,
+      length : loan.length
     }
   );
   return loans;
@@ -44,7 +44,7 @@ exports.update = async (loan) => {
 exports.delete = async (title) => {
   const loanCollection = await getConnection();
   const removed = await loanCollection.findOneAndDelete({
-    title: this.title,
+    title: title,
   });
   return removed;
 };

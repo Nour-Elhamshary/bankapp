@@ -5,7 +5,7 @@ const clientsRouters = require("./routers/clients");
 const remittanceRouters = require("./routers/fundremittance");
 const accountsRouters = require("./routers/accounts");
 const virtualRouters=require('./routers/virtualCard');
-const loanRouters = require("./routers/Loans");
+const loanRouters = require("./routers/Loan");
 const transRoute=require("./routers/failedTransaction");
 
 app.use(express.json());
