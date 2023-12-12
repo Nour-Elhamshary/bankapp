@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "83f0ff29-b22b-45cf-bb96-48f5d493810c",
+		"name": "Omar's Loan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28987476"
+	},
+	"item": [
+		{
+			"name": "Retrieve List of Loans",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Loan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Houe\",\r\n    \"amount\": \"10000\",\r\n    \"interest_rate\": \"5\",\r\n    \"length\": \"3\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Loans",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Motocycle\",\r\n    \"amount\": \"5000\",\r\n    \"interest_rate\": \"9\",\r\n    \"length\": \"4\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Loan",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Apartment\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/loans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"loans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

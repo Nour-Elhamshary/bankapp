@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "b60e0919-70a4-4f5b-b9aa-067003550e9e",
+		"name": "Nour's Account and FundRemittance",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28987476"
+	},
+	"item": [
+		{
+			"name": "Add Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"DsnePlus\",\r\n    \"creditcard\": \"2918276348573825\",\r\n    \"typeofaccount\": \"current\",\r\n    \"balance\": 90\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/accounts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Account",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/accounts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"primeMe\",\r\n    \"creditcard\": \"2918276348573825\",\r\n    \"typeofaccount\": \"Debit\",\r\n    \"balance\": 5500\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/accounts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Account",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditcard\": \"2918276348573825\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/accounts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"accounts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer funds",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"account1\": \r\n        {\r\n            \"name\": \"Jflix\",\r\n            \"creditcard\": \"3847292319283745\",\r\n            \"typeofaccount\": \"Credit\",\r\n            \"balance\": 5000\r\n        }\r\n    ,\r\n    \"account2\":\r\n        {\r\n            \"name\": \"Nflix\",\r\n            \"creditcard\": \"3847292319283745\",\r\n            \"typeofaccount\": \"savings\",\r\n            \"balance\": 4900\r\n        }\r\n    ,\r\n    \"amount\": 50\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/remittance/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"remittance",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

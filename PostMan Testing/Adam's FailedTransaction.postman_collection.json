@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "f4de855b-a20e-44e6-b109-8d873267315d",
+		"name": "Adam's FailedTransaction",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28987476"
+	},
+	"item": [
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/trans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Debenhams\",\r\n    \"amount\": \"1000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/trans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trans"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"my company\",\r\n        \"amount\": \"1000\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/trans",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"trans"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
