@@ -4,7 +4,7 @@ const APP=()=>{
   const dummyclient={
     name:'Mazen',
     email:'mazen@gmail.com',
-    password: 'MazenSuckDi'
+    password: 'MAzen'
   };
 
   return(
